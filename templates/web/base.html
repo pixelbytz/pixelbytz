@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="discrption" content="parallax one page" />
+    <meta name="keyword" content="agency, business, corporate, creative, freelancer, interior, joomla template, K2 Blog, minimal, modern, multipurpose, personal, portfolio, responsive, simple" />
+ 
+    <!--  Title -->
+    <title>{% block title %}pixelbytz{% endblock %}</title>
+
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{% static 'web/assets/img/favicon.ico' %}" type="image/x-icon" />
+    <link rel="icon" href="{% static 'web/assets/img/favicon.ico' %}" type="image/x-icon" />
+
+    <!-- custom styles (optional) -->
+    <link href="{% static 'web/assets/css/plugins.css' %}" rel="stylesheet" />
+    <link href="{% static 'web/assets/css/style.css' %}" rel="stylesheet" />
+    {% block css_plugins %}{% endblock %}
+    {% block stylesheet %}{% endblock %}
+</head>
+<body class="hamburger-menu dsn-effect-scroll dsn-ajax" data-dsn-mousemove="true">
+
+    <div class="preloader">
+        <div class="preloader-after"></div>
+        <div class="preloader-before"></div>
+        <div class="preloader-block">
+            <div class="title">pixelbytz</div>
+            <div class="percent">0</div>
+            <div class="loading">loading...</div>
+        </div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Nav Bar -->
+    {% include 'web/includes/nav.html' %}
+    <!--End Nav Bar -->
+
+    <main class="main-root">
+        <div id="dsn-scrollbar">
+
+        {% block content %}
+
+        {% endblock %}
+
+        <!-- Footer -->
+        {% include 'web/includes/footer.html' %}
+        <!--End Footer -->
+        </div>
+    </main>
+
+    <!-- Wait Loader -->
+    <div class="wait-loader">
+        <div class="loader-inner">
+            <div class="loader-circle">
+                <div class="loader-layer"></div>
+            </div>
+        </div>
+    </div>
+    <!-- // Wait Loader -->
+
+    <!-- cursor -->
+    <div class="cursor">
+
+        <div class="cursor-helper cursor-view">
+            <span>VIEW</span>
+        </div>
+
+        <div class="cursor-helper cursor-close">
+            <span>Close</span>
+        </div>
+
+        <div class="cursor-helper cursor-link"></div>
+    </div>
+    <!-- End cursor -->
+
+
+    <!-- Optional JavaScript -->
+    <script src="{% static 'web/assets/js/jquery-3.1.1.min.js' %}"></script>
+    <script src="{% static 'web/assets/js/plugins.js' %}"></script>
+    <script src="{% static 'web/assets/js/dsn-grid.js' %}"></script>
+    <script src="{% static 'web/assets/js/custom.js' %}"></script>
+    {% block js_plugins %}{% endblock %}
+    {% block javascript %}{% endblock %}
+</body>
+</html>
